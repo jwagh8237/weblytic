@@ -2756,6 +2756,217 @@ body {
   background: var(--color-surface-alt);
 }
 
+/* SHARED MOBILE NAVIGATION FIX */
+
+@media (max-width: 760px) {
+    .pro-right-nav__inner {
+        position: relative;
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .pro-right-nav__right {
+        display: contents;
+    }
+
+    .pro-right-nav__links {
+        left: -5.56%;
+        right: -5.56%;
+        width: auto;
+        max-height: calc(100dvh - 76px);
+        overflow-y: auto;
+        z-index: 1001;
+    }
+
+    .pro-right-nav__links a {
+        display: block;
+        min-height: 44px;
+        box-sizing: border-box;
+    }
+
+    .pro-right-nav__toggle-label {
+        display: flex;
+        margin-left: auto;
+    }
+}
+
+/* SERVICES PAGE — RESPONSIVE FIXES */
+
+/* Additional services: base layout */
+.pas-feature {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 40px;
+    align-items: start;
+    width: 100%;
+    min-width: 0;
+}
+
+.pas-visual,
+.pas-content {
+    min-width: 0;
+}
+
+.pas-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.pas-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.pas-image-caption {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 12px;
+}
+
+.pas-content h3,
+.pas-description {
+    overflow-wrap: break-word;
+}
+
+/* Prevent narrow pricing rows from overflowing */
+.pas-addon-name {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.pas-addon-price {
+    flex-shrink: 0;
+}
+
+/* Tablet */
+@media (max-width: 960px) {
+    .pas-feature {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+    }
+
+    .psc-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile */
+@media (max-width: 620px) {
+    .professional-centered-hero {
+        padding: 60px 18px;
+    }
+
+    .professional-centered-hero .hero-title {
+        font-size: clamp(32px, 8.5vw, 42px);
+        line-height: 1.15;
+        overflow-wrap: break-word;
+    }
+
+    .professional-centered-hero .hero-description {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .professional-centered-hero .hero-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .professional-centered-hero .hero-button,
+    .professional-centered-hero .hero-secondary {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .psc-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .psc-card,
+    .psc-card:last-child {
+        grid-column: auto;
+        min-width: 0;
+        padding: 22px 18px;
+    }
+
+    .pas-feature {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .pas-image img {
+        aspect-ratio: 16 / 10;
+    }
+
+    .pas-content h3 {
+        font-size: clamp(24px, 7vw, 32px);
+        line-height: 1.2;
+    }
+
+    .pas-addon-item {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .pas-addon-name {
+        flex: 1 1 auto;
+        font-size: 12px;
+    }
+
+    .pas-addon-price {
+        font-size: 12px;
+    }
+
+    .weblytic-pricing .wp-heading h2 {
+        font-size: clamp(27px, 7vw, 34px);
+        overflow-wrap: break-word;
+    }
+
+    .weblytic-pricing .wp-cost-list li {
+        flex-wrap: wrap;
+    }
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+    .pas-addon-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .pas-addon-price {
+        text-align: left;
+    }
+
+    .weblytic-pricing .wp-cta {
+        padding: 20px 16px;
+    }
+
+    .weblytic-pricing .wp-cta-button {
+        width: 100%;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .mr-simple-cta__title {
+        font-size: 28px;
+    }
+}
+
 
     </style>
 
