@@ -1638,6 +1638,164 @@ img[class*="avatar"],
   outline: 3px solid var(--color-accent);
   outline-offset: 3px;
 }
+        
+/* SHARED MOBILE NAVIGATION FIX */
+
+@media (max-width: 760px) {
+    .pro-right-nav__inner {
+        position: relative;
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .pro-right-nav__right {
+        display: contents;
+    }
+
+    .pro-right-nav__links {
+        left: -5.56%;
+        right: -5.56%;
+        width: auto;
+        max-height: calc(100dvh - 76px);
+        overflow-y: auto;
+        z-index: 1001;
+    }
+
+    .pro-right-nav__links a {
+        display: block;
+        min-height: 44px;
+        box-sizing: border-box;
+    }
+
+    .pro-right-nav__toggle-label {
+        display: flex;
+        margin-left: auto;
+    }
+}
+
+/* CONTACT PAGE — RESPONSIVE FIXES */
+
+.business-contact__contact-item > div,
+.business-contact__support > div {
+    min-width: 0;
+}
+
+.business-contact__contact-item a,
+.business-contact__contact-item p,
+.business-contact__contact-item small {
+    overflow-wrap: anywhere;
+}
+
+.business-contact__field input,
+.business-contact__field select,
+.business-contact__field textarea {
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+    .business-contact__header > p {
+        max-width: 100%;
+    }
+
+    .business-contact__layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 580px) {
+    .business-contact {
+        padding: 48px 16px 32px;
+    }
+
+    .business-contact__header {
+        gap: 16px;
+        margin-bottom: 28px;
+    }
+
+    .business-contact__header h2 {
+        font-size: clamp(28px, 8vw, 34px);
+        line-height: 1.2;
+        letter-spacing: -0.8px;
+    }
+
+    .business-contact__header > p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .business-contact__sidebar,
+    .business-contact__form-panel {
+        padding: 20px 16px;
+        min-width: 0;
+    }
+
+    /* Critical: prevent horizontal contact list */
+    .business-contact__contact-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .business-contact__contact-item {
+        width: 100%;
+        min-width: 0;
+        gap: 12px;
+        padding: 17px 0;
+    }
+
+    .business-contact__icon {
+        flex-shrink: 0;
+    }
+
+    .business-contact__field-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .business-contact__field--full {
+        grid-column: auto;
+    }
+
+    .business-contact__field input,
+    .business-contact__field select,
+    .business-contact__field textarea {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .business-contact__form-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .business-contact__submit {
+        width: 100%;
+        min-height: 48px;
+        padding: 12px 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .business-contact {
+        padding-inline: 12px;
+    }
+
+    .business-contact__sidebar,
+    .business-contact__form-panel {
+        padding: 16px 12px;
+    }
+
+    .business-contact__header h2 {
+        font-size: 27px;
+    }
+}
+
     </style>
 </body>
 </html>
