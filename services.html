@@ -2966,9 +2966,73 @@ body {
         font-size: 28px;
     }
 }
-.pas-feature{
-    top-margin: 10px;
+
+/* FIX: Additional Services image touching upper cards */
+
+.weblytic-pricing .pas-feature {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 48px;
+    margin-top: 80px;
+    width: 100%;
 }
+
+/* Image container */
+.weblytic-pricing .pas-visual {
+    min-width: 0;
+    width: 100%;
+}
+
+/* Image styling */
+.weblytic-pricing .pas-image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.weblytic-pricing .pas-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+/* Image caption spacing */
+.weblytic-pricing .pas-image-caption {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+/* Content */
+.weblytic-pricing .pas-content {
+    min-width: 0;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .weblytic-pricing .pas-feature {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        margin-top: 60px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .weblytic-pricing .pas-feature {
+        margin-top: 40px;
+        gap: 24px;
+    }
+
+    .weblytic-pricing .pas-image img {
+        aspect-ratio: 16 / 10;
+    }
+}
+
 
     </style>
 
